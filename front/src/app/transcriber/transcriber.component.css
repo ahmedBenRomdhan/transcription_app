@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.transcribe-button {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  background-color: lightgray;
+  text-align: center; /* Center text horizontally */
+  padding: 20px;
+}
+
+
+.with-background {
+  background-image: url('../../assets/img/website-background-templates.jpg'); /* Replace 'path/to/your/background-image.jpg' with the actual path to your background image */
+  background-size: cover; /* Scale the background image to cover the entire container */
+  background-position: center; /* Center the background image within the container */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  height: 100vh; /* Set the body height to 100% of the viewport height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+.translucent-search, .translucent-button, .translucent-textarea  {
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the last value (0.5) to set the opacity (0 is fully transparent, 1 is fully opaque) */
+}
+
+
+button.transcribe-button {
+  margin-left: 5px; /* Adjust as needed */
+}

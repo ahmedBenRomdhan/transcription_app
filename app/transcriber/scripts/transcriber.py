@@ -73,5 +73,11 @@ def transcribe_video(video_url):
         print('Transcription is processing ...')
         transcript_output_response = requests.get(endpoint, headers=headers)
 
+    os.remove(filename)
+    print("7. Audio file deleted successfully.")
+
     # 7. Return transcribed text
     return transcript_output_response.json()["text"]
+
+    # 8. Delete the audio file
+    
