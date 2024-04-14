@@ -36,3 +36,14 @@
 button.transcribe-button {
   margin-left: 5px; /* Adjust as needed */
 }
+
+
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.highlight-color{
+ background-color: green;
+}

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TranscriberComponent } from './transcriber/transcriber.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HighlightModule } from './highlight/highlight.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    
+    HighlightModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

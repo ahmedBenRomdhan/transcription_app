@@ -1,15 +1,27 @@
 <body class="with-background">
-  <div class="container pt-4"> <!-- Added padding top (pt-4) -->
-    <form class="d-flex" role="search">
-      <div class="col-9">
-        <input class="form-control translucent-search with-margin"  type="search" placeholder="Search" aria-label="Search" [(ngModel)]="videoUrl" [ngModelOptions]="{standalone: true}">
+  <div class="container pt-4">
+    <form class="d-flex flex-wrap align-items-start" role="search">
+      <div class="col-9 mb-2">
+        <input class="form-control translucent-search with-margin" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="videoUrl" [ngModelOptions]="{standalone: true}">
       </div>
-      <div class="col-">
-        <button class="btn btn-light w-85 translucent-button transcribe-button" (click)="transcribe()">Transcribe</button>
+      <div class="col- mb-2">
+        <button class="btn btn-light w-100 translucent-button transcribe-button" (click)="transcribeVideo()">Transcribe</button>
       </div>
+
+      <div class="col-9" *ngIf="transcribedText || searchText">
+        <div class="mb-2">
+          <input class="form-control translucent-search" type="text" id="searchText" [(ngModel)]="searchText" placeholder="Search Text" [ngModelOptions]="{standalone: true}" (input)="highlightText()">
+        </div>
+        <div>
+          <p class="form-control translucent-textarea mt-2" [innerHTML]="highlightedText"></p>
+        </div>
+      </div>
+
+
     </form>
-    <div class="mt-3 col-9">
-      <textarea class="form-control w-100 translucent-textarea" *ngIf="transcribedTextReady" rows="10" [(ngModel)]="transcribedText" readonly></textarea>
-    </div>
   </div>
 </body>
+
+
+
+ 
